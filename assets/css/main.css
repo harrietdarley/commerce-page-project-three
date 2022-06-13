@@ -16,6 +16,7 @@ header {
     padding: 30px;
 }
 
+/*DROPDOWN NAV*/
 #dropdown-menu-group {
     display: flex;
     flex-direction: row;
@@ -31,21 +32,19 @@ header {
 
 .nav-menu {
     background-color: black;
+    opacity: 75%;
     position: fixed;
-    height: 100vh;
+    height: 300vh;
     top: 0;
     left: 0;
     right: 0;
 }
 
-.hidden {
-    display: none;
-}
-
 #nav-menu-group {
     background-color: white;
+    opacity: 1;
     height: 100%;
-    width: 66vw;
+    width: 65vw;
     padding: 36px;
 }
 
@@ -62,14 +61,7 @@ header {
     opacity: 0.75;
 }
 
-.cart-icon-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 35px;
-} 
-
+/*NAV AVATAR*/
 #image-avatar { 
     width: 40px;
     cursor: pointer;
@@ -81,6 +73,15 @@ header {
     border-radius: 50%;  
 }
 
+/*CART ICON GROUP*/
+.cart-icon-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+} 
+
 #icon-cart {
     cursor: pointer; 
 }
@@ -88,10 +89,11 @@ header {
 .cart-modal {
     position: absolute;
     right: 16px;
-    top: 120%;
+    top: 120px;
     width: 568px;
     z-index: 1;
     background-color: white;
+    border-radius: 20px;
 }
 
 #cart-header {
@@ -113,7 +115,8 @@ header {
     border-radius: 8px;
 }
 
-#details {
+
+#nav-cart-details {
     color: hsl(219, 9%, 45%);
     font-size: 25px;
     line-height: 40px;
@@ -127,6 +130,7 @@ header {
 #total-price {
     font-weight: 700;
     font-size: 27px;
+    color: black;
 }
 
 .cart-empty {
@@ -149,8 +153,6 @@ header {
 }
 
 /*LIGHTBOX*/
-
-
 #main-sneaker-img {
     width: 100%;
 }
@@ -178,9 +180,7 @@ header {
 }
 
 
-
 /*SNEAKER DESCRIPTION SECTION*/
-
 .product {
     padding: 32px 38px;
 }
@@ -278,6 +278,7 @@ header {
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0px 20px 20px 0px hsl(25, 100%, 94%);
+    text-align: center;
 }
 
 #cart-btn:hover {
@@ -285,6 +286,10 @@ header {
 }
 
 #second-cart-img {
-    height: 24px;
-    color: white;
+    height: 26px;
+    filter:  brightness(0) invert(1);
+}
+
+#cart-description {
+    margin-top: 15px;
 }
