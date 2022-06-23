@@ -94,6 +94,7 @@ header {
     z-index: 1;
     background-color: white;
     border-radius: 20px;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
 }
 
 #cart-header {
@@ -292,4 +293,164 @@ header {
 
 #cart-description {
     margin-top: 15px;
+}
+
+.thumb-gallery {
+    display: none;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 1440px) {
+    
+
+.content {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+header {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 0;
+    border-bottom: 3px solid hsl(220, 14%, 75%);
+}
+
+/*NAVIGATION BAR*/
+#menu-img {
+    display: none;
+}
+
+.nav-menu {
+    display: block;
+    position: unset;
+    height: unset;
+}
+
+#nav-menu-group {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 45px;
+}
+
+#dropdown-menu-group {
+    gap: 0px;
+}
+
+#icon-close {
+    display: none;
+}
+
+.nav-link { 
+    font-weight: 400;
+    padding: 60px 0;
+    display: block;
+    margin-top: 0px;
+}
+
+.navbar-brand {
+    margin-right: 75px;
+}
+
+.cart-icon-group {
+    gap: 55px;
+    margin-right: 200px;
+}
+
+#image-avatar { 
+    width: 80px;
+}
+
+#image-cart {
+    width: 30px;
+}
+
+/*CONTENT*/
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product {
+    margin: 50px 32px 0px 200px
+}
+
+#sneaker-description {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#sneaker-title {
+    font-size: 70px;
+}
+
+#old-price {
+    margin-bottom: 30px;
+}
+
+#price-container {
+    display: unset;
+}
+
+#counter-btn-group {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#counter-container {
+    width: 40%;
+    height: 100px;
+}
+
+#cart-btn {
+    width: 52%;
+    height: 100px;
+}
+
+/*Images*/
+.lightbox {
+    margin-left: 100px;
+}
+
+#main-sneaker-img {
+    margin: 120px 150px 0px 0px;
+    border-radius: 25px;
+}
+
+#previous-img {
+    display: none;
+}
+
+#next-img {
+    display: none;
+}
+
+.thumb-gallery {
+    display: unset;
+}
+
+#thumb-pictures {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.thumb {
+    border-radius: 16px;
+    width: 20%;
+}
+
+.thumb:hover {
+    opacity: 0.5;
+}
+
+.active {
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
 }
