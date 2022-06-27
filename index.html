@@ -53,7 +53,7 @@
         <div class="cart-icon-group">
             <div id="icon-cart">
                 <img src="assets/images/icon-cart.svg" id="image-cart" alt="cart icon">
-                <div class="cart-count"></div>
+                <div class="cart-number hidden">3</div>
             </div>
             <div id="navbar-avatar">
                 <img src="assets/images/image-avatar.png" id="image-avatar" alt="image avatar ">
@@ -80,8 +80,6 @@
                 <div class="cart-empty hidden">Your cart is empty.</div>
                 <div id="checkout">Checkout</div>
             </div>
-
-
         </div>
     </header>
 
@@ -91,18 +89,26 @@
         <!--Lightbox-->
         <section class="lightbox">
             <img src="assets/images/image-product-1.jpg" alt="image-product" id="main-sneaker-img">
-            <div class="arrow icon-previous">
+            <div class="arrow previous-arrow">
                 <img src="assets/images/icon-previous.svg" alt="previous arrow" id="previous-img">
             </div>
-            <div class="arrow icon-next">
+            <div class="arrow next-arrow">
                 <img src="assets/images/icon-next.svg" alt="next arrow" id="next-img">
             </div>
-            <div class="thumb-gallery active">
+            <div class="thumb-gallery">
                 <div id="thumb-pictures">
-                    <img src="assets/images/image-product-1-thumbnail.jpg" alt="thumb-one" class="thumb">
-                    <img src="assets/images/image-product-2-thumbnail.jpg" alt="thumb-two" class="thumb">
-                    <img src="assets/images/image-product-3-thumbnail.jpg" alt="thumb-three" class="thumb">
-                    <img src="assets/images/image-product-4-thumbnail.jpg" alt="thumb-four" class="thumb">
+                    <div class="thumb-pic">
+                        <img src="assets/images/image-product-1-thumbnail.jpg" alt="thumb-one" class="thumb active">
+                    </div>
+                    <div class="thumb-pic">
+                        <img src="assets/images/image-product-2-thumbnail.jpg" alt="thumb-two" class="thumb">
+                    </div>
+                    <div class="thumb-pic">
+                        <img src="assets/images/image-product-3-thumbnail.jpg" alt="thumb-three" class="thumb">
+                    </div>
+                    <div class="thumb-pic">
+                        <img src="assets/images/image-product-4-thumbnail.jpg" alt="thumb-four" class="thumb">
+                    </div>
                 </div>
             </div>
         </section>
@@ -123,10 +129,10 @@
                 <div id="old-price">$250.00</div>
             </div>
             <div id="counter-btn-group">
-                <div id="counter-container">
-                    <img src="assets/images/icon-minus.svg" alt="icon minus" class="minus-plus-img">
+                <div id="counter-btn">
+                    <img src="assets/images/icon-minus.svg" alt="icon minus" id="minus-img">
                     <div id="counter">1</div>
-                    <img src="assets/images/icon-plus.svg" alt="icon plus" class="minus-plus-img">
+                    <img src="assets/images/icon-plus.svg" alt="icon plus" id="plus-img">
                 </div>
                 <div id="cart-btn">
                     <img src="assets/images/icon-cart.svg" alt="cart icon" id="second-cart-img">

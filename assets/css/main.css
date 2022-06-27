@@ -83,7 +83,22 @@ header {
 } 
 
 #icon-cart {
-    cursor: pointer; 
+    position: relative;
+}
+
+.cart-number {
+    position: absolute;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    border-radius: 45%;
+    line-height: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    top: -25%;
+    right: -25%;
+    height: 15px;
+    width: 22px;
+    text-align: center;
 }
 
 .cart-modal {
@@ -154,6 +169,10 @@ header {
 }
 
 /*LIGHTBOX*/
+.lightbox {
+    position: relative;
+}
+
 #main-sneaker-img {
     width: 100%;
 }
@@ -161,25 +180,30 @@ header {
 .arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background-color: white;
     border-radius: 50%;
-    width: 64px;
-    height: 64px;
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
-.icon-previous {
+.previous-arrow {
     left: 5%;
 }
 
-.icon-next {
+.previous-arrow:hover {
+    left: 4%;
+}
+
+.next-arrow {
     right: 5%;
 }
 
+.next-arrow:hover {
+    right: 4%;
+}
 
 /*SNEAKER DESCRIPTION SECTION*/
 .product {
@@ -244,12 +268,12 @@ header {
     text-decoration: line-through;
 }
 
-#counter-container {
+#counter-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: hsl(223, 64%, 98%);
-    padding: 19px 38px;
+    padding: 24px 38px;
     margin-top: 32px;
     border-radius: 16px;
 }
@@ -259,10 +283,14 @@ header {
     font-weight: 700;
 }
 
-.minus-plus-img {
+#minus-img,
+#plus-img {
     padding: 16px;
 }
-.minus-plus-img:hover {
+#minus-img:hover {
+    opacity: 0.5;
+}
+#plus-img:hover {
     opacity: 0.5;
 }
 
@@ -401,7 +429,7 @@ header {
 
 }
 
-#counter-container {
+#counter-btn{
     width: 40%;
     height: 100px;
 }
@@ -421,11 +449,7 @@ header {
     border-radius: 25px;
 }
 
-#previous-img {
-    display: none;
-}
-
-#next-img {
+.arrow {
     display: none;
 }
 
@@ -438,11 +462,11 @@ header {
     align-items: center;
     justify-content: space-between;
     margin-top: 40px;
+    gap: 15px;
 }
 
 .thumb {
     border-radius: 16px;
-    width: 20%;
 }
 
 .thumb:hover {
@@ -450,7 +474,7 @@ header {
 }
 
 .active {
-    border: 2px solid hsl(26, 100%, 55%);
+      border: 3px solid hsl(26, 100%, 55%);
 }
 
 }
