@@ -35,6 +35,7 @@ header {
     opacity: 75%;
     position: fixed;
     height: 300vh;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -42,7 +43,6 @@ header {
 
 #nav-menu-group {
     background-color: white;
-    opacity: 1;
     height: 100%;
     width: 65vw;
     padding: 36px;
@@ -171,6 +171,7 @@ header {
 /*LIGHTBOX*/
 .lightbox {
     position: relative;
+    overflow: hidden;
 }
 
 #main-sneaker-img {
@@ -475,6 +476,7 @@ header {
 
 .active {
       border: 3px solid hsl(26, 100%, 55%);
+      border-radius: 16px;
 }
 
 }
