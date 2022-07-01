@@ -17,7 +17,6 @@ const checkout = document.querySelector('#checkout');
 
 const thumbGallery = document.querySelectorAll(".thumb");
 const mainImg = document.querySelector('#main-sneaker-img');
-
 const arrowPrevious = document.querySelector(".previous-arrow");
 const arrowNext = document.querySelector(".next-arrow");
 
@@ -170,16 +169,41 @@ thumbGallery.forEach(img => {
     img.addEventListener('click', thumbPicClick)
 });
 
-
 //Gallery - arrows
 const clickArrowPrevious = () => {
-
+    let imageIndex = getCurrentImageIndex();
+    imageIndex--;
+    if (imageIndex < 1) {
+        imageIndex = 4;
+    }
+    setMainImage(imageIndex);
 }
 
-const clickArrowNext = () => {
 
+const clickArrowNext = () => {
+    let imageIndex = getCurrentImageIndex();
+    imageIndex++;
+    if (imageIndex > 4) {
+        imageIndex = 1;
+    }
+    setMainImage(imageIndex);
 }
 
 arrowPrevious.addEventListener('click', clickArrowPrevious);
 arrowNext.addEventListener('click', clickArrowNext);
+
+const getCurrentImageIndex = () => {
+    const imageIndex = parseInt(mainImg.src.split('\\').pop().split('/').pop().replace('.jpg', '').replace('image-product-', ''));
+    return imageIndex;
+}
+
+const setMainImage = (imageIndex) => {
+    mainImg.src = `./assets/images/image-product-${imageIndex}.jpg`;
+    //images are not sync
+    thumbGallery.forEach(img => {
+        img.classList.remove('active');
+    });
+    //set active thumbnail
+    thumbGallery[imageIndex - 1].classList.add('active');
+}
 
