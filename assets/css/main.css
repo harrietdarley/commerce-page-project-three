@@ -334,15 +334,21 @@ header {
     
 
 .content {
-    margin-left: 200px;
-    margin-right: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9rem 5rem;
+}
+
+.hidden {
+    display: none;
 }
 
 header {
     margin-left: 200px;
     margin-right: 200px;
     padding: 0;
-    border-bottom: 3px solid hsl(220, 14%, 75%);
+    border-bottom: 2px solid hsl(220, 14%, 75%);
 }
 
 /*NAVIGATION BAR*/
@@ -354,14 +360,17 @@ header {
     display: block;
     position: unset;
     height: unset;
+    z-index: unset;
 }
 
 #nav-menu-group {
-    padding: 0px;
+    color: hsl(219, 9%, 45%);
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 45px;
+    padding: 0px;
+    font-weight: 400;
 }
 
 #dropdown-menu-group {
@@ -373,10 +382,16 @@ header {
 }
 
 .nav-link { 
-    font-weight: 400;
-    padding: 60px 0;
     display: block;
+    padding: 60px 0;
+    border-bottom: 3px solid transparent;
     margin-top: 0px;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    border-bottom: 5px solid hsl(26, 100%, 55%);
 }
 
 .navbar-brand {
@@ -397,14 +412,8 @@ header {
 }
 
 /*CONTENT*/
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .product {
-    margin: 50px 32px 0px 200px
+    margin: 50px 32px 0px 150px
 }
 
 #sneaker-description {
@@ -443,12 +452,37 @@ header {
 
 /*Images*/
 .lightbox {
-    margin-left: 100px;
+    margin-left: 200px;
+    width: 100%;
 }
 
 #main-sneaker-img {
-    margin: 120px 150px 0px 0px;
     border-radius: 25px;
+}
+
+.arrow {
+    display: none;
+}
+
+.thumb-gallery {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#thumb-pictures {
+    display: flex;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.thumb {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.thumb:hover {
+    opacity: 0.5;
 }
 
 .arrow {
@@ -460,9 +494,6 @@ header {
 }
 
 #thumb-pictures {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-top: 40px;
     gap: 15px;
 }
@@ -480,4 +511,43 @@ header {
       border-radius: 16px;
 }
 
+/*Overlay*/
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+}
+
+.lightbox {
+    max-width: 900px;
+}
+
+.next-arrow {
+    display: flex;
+    transform: translateX(50%);
+}
+
+.previous-arrow {
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.arrow {
+    top: 40%;
+}
+
+#closeBtn {
+    width: 57rem;
+    text-align: end;
+    padding: 2rem 0;
+}
+
+#closeOverlay {
+    color: orange;
+}
 }

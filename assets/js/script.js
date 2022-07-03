@@ -20,6 +20,8 @@ const mainImg = document.querySelector('#main-sneaker-img');
 const arrowPrevious = document.querySelector(".previous-arrow");
 const arrowNext = document.querySelector(".next-arrow");
 
+const overlay = document.querySelector('.overlay');
+const lightbox = document.querySelector('.lightbox');
 
 //Numerical
 let productCounterValue = 1;
@@ -199,11 +201,84 @@ const getCurrentImageIndex = () => {
 
 const setMainImage = (imageIndex) => {
     mainImg.src = `./assets/images/image-product-${imageIndex}.jpg`;
-    //images are not sync
     thumbGallery.forEach(img => {
         img.classList.remove('active');
     });
-    //set active thumbnail
     thumbGallery[imageIndex - 1].classList.add('active');
 }
 
+//Overlay & Lightbox
+const mainImgClick = () => {
+    if (window.innerWidth >= 1440) {
+        if (overlay.childElementCount == 1) {
+            const newNode = lightbox.cloneNode(true);
+            overlay.appendChild(newNode);
+
+            const closeOverlay = document.querySelector('#closeOverlay');
+            closeOverlay.addEventListener('click', closeOverlayBtn);
+
+            galleryLightbox = overlay.querySelectorAll('.thumb-pic');
+            mainLightbox = overlay.querySelector('#main-sneaker-img');
+            galleryLightbox.forEach(img => {
+                img.addEventListener('click', galleryLightboxBtn);
+            });
+
+            const nextBtnOverlay = overlay.querySelector('.next-arrow');
+            const previousBtnOverlay = overlay.querySelector('.previous-arrow');
+            nextBtnOverlay.addEventListener('click', clickNextOverlay);
+            previousBtnOverlay.addEventListener('click', clickPreviousOverlay);
+        }
+        overlay.classList.remove('hidden');
+    }
+}
+
+let galleryLightbox;
+let mainLightbox;
+mainImg.addEventListener('click', mainImgClick);
+
+const closeOverlayBtn = () => {
+    overlay.classList.add('hidden');
+}
+
+const galleryLightboxBtn = (event) => {
+    galleryLightbox.forEach(img => {
+        img.classList.remove('active');
+    });
+    //set active thumbnail
+    event.target.parentElement.classList.add('active');
+    //update hero image
+    mainLightbox.src = event.target.src.replace('-thumbnail', '');
+}
+
+const clickNextOverlay = () => {
+    let imageIndex = overlayImageIndex();
+    imageIndex++;
+    if (imageIndex > 4) {
+        imageIndex = 1;
+    }
+    setOverlayMainImage(imageIndex);
+}
+
+const clickPreviousOverlay = () => {
+    let imageIndex = overlayImageIndex();
+    imageIndex--;
+    if (imageIndex < 1) {
+        imageIndex = 4;
+    }
+    setOverlayMainImage(imageIndex);
+}
+
+const overlayImageIndex = () => {
+    const imageIndex = parseInt(mainLightbox.src.split('\\').pop().split('/').pop().replace('.jpg', '').replace('image-product-', ''));
+    return imageIndex;
+}
+
+const setOverlayMainImage = (imageIndex) => {
+    mainLightbox.src = `./assets/images/image-product-${imageIndex}.jpg`;
+    //images are not sync
+    galleryLightbox.forEach(img => {
+        img.classList.remove('active');
+    });
+    //set active thumbnail
+    galleryLightbox[imageIndex - 1].classList.add('active');
+}
