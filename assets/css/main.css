@@ -437,7 +437,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 #counter-btn{
@@ -458,10 +457,6 @@ header {
 
 #main-sneaker-img {
     border-radius: 25px;
-}
-
-.arrow {
-    display: none;
 }
 
 .thumb-gallery {
@@ -485,17 +480,13 @@ header {
     opacity: 0.5;
 }
 
-.arrow {
-    display: none;
-}
-
 .thumb-gallery {
     display: unset;
 }
 
 #thumb-pictures {
     margin-top: 40px;
-    gap: 15px;
+    gap: 60px;
 }
 
 .thumb {
@@ -506,6 +497,10 @@ header {
     opacity: 0.5;
 }
 
+.arrow {
+    display: none;
+}
+
 .active {
       border: 3px solid hsl(26, 100%, 55%);
       border-radius: 16px;
@@ -514,40 +509,57 @@ header {
 /*Overlay*/
 
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
-    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 5;
 }
 
 .lightbox {
     max-width: 900px;
 }
 
-.next-arrow {
-    display: flex;
-    transform: translateX(50%);
-}
-
-.previous-arrow {
-    display: flex;
-    transform: translateX(-50%);
-}
-
-.arrow {
-    top: 40%;
+.overlay .lightbox {
+    margin: 0 auto;
 }
 
 #closeBtn {
-    width: 57rem;
+    width: 70%;
     text-align: end;
-    padding: 2rem 0;
+    padding: 82px 0;
 }
 
 #closeOverlay {
-    color: orange;
+    filter: invert(46%) sepia(77%) saturate(3018%) hue-rotate(3deg) brightness(105%) contrast(105%);
+    width: 30px;
 }
+
+.overlay .arrow {
+    display: unset;
+    top: 40%;
+    z-index: 1;
+    position: absolute;
+}
+
+.overlay .next-arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    transform: translateX(50%)
+}
+
+.overlay .previous-arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    transform: translateX(-50%);
+}
+
 }
