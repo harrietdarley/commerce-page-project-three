@@ -15,7 +15,7 @@ const productInCart = document.querySelector('#cart-products')
 const cartEmpty = document.querySelector('.cart-empty');
 const checkout = document.querySelector('#checkout');
 
-const thumbGallery = document.querySelectorAll(".thumb");
+const thumbGallery = document.querySelectorAll(".thumb-pic");
 const mainImg = document.querySelector('#main-sneaker-img');
 const arrowPrevious = document.querySelector(".previous-arrow");
 const arrowNext = document.querySelector(".next-arrow");
@@ -165,11 +165,14 @@ const thumbPicClick = (event) => {
     event.target.parentElement.classList.add('active');
 
     mainImg.src = event.target.src.replace('-thumbnail', '');
+    console.log(thumbGallery);
 }
 
 thumbGallery.forEach(img => {
     img.addEventListener('click', thumbPicClick)
 });
+
+
 
 //Gallery - arrows
 const clickArrowPrevious = () => {
