@@ -28,10 +28,9 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-### Links
+### Link
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [file:///Users/harrietdarley/Downloads/project-three/index.html#]
 
 ## My process
 
