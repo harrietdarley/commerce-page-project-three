@@ -40,4 +40,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [Harriet Darley](https://www.your-site.com)
+- Website - [Harriet Darley]([https://github.com/harrietdarley])
