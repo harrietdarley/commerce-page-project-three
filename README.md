@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: [file:///Users/harrietdarley/Downloads/project-three/index.html#]
+- Live Site URL: (file:///Users/harrietdarley/Downloads/project-three/index.html#)
 
 ## My process
 
