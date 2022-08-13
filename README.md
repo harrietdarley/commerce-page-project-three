@@ -10,6 +10,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
   - [Links](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -46,6 +47,13 @@ Users should be able to:
 - JS
 - CSS Grid
 - Chrome Inspect Tool
+
+### What I learned 
+
+- How to create a lightbox gallery using CSS
+- Using JavaScript to add items to the basket 
+- Using arrow functionality to scroll through images 
+- Creating a half-page navigation bar using CSS
 
 ## Author
 
