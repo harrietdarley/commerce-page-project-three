@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: (https://harrietdarley.github.io/commerce-page-project-three/)
+- Live Site URL: [Commerce Page](https://harrietdarley.github.io/commerce-page-project-three/)
 
 ## My process
 
