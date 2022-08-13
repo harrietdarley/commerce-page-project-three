@@ -86,7 +86,7 @@ const addToCartFunction = () => {
                     <div id="total-price">$${(productprice * productdiscount * cartProducts).toFixed(2)}</div>
                 </div>
             </div>
-            <img src="assets/images/icon-delete.svg" alt="icon delete" id="icon-delete">
+        <img src="assets/images/icon-delete.svg" alt="icon delete" id="icon-delete">
     </div>
     `;
 
