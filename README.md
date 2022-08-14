@@ -6,7 +6,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshots] (#screenshots)
+  - [Screenshots](#screenshots)
   - [Links](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
